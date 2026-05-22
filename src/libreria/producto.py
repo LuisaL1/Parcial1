@@ -1,2 +1,9 @@
 class Producto:
-    pass
+
+    def __init__(self, nombre, precio_base):
+
+        if precio_base <= 0:
+            raise ValueError("El precio debe ser mayor que cero")
+
+        self.nombre = nombre
+        self.precio_base = precio_base
