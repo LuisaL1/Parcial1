@@ -1,2 +1,6 @@
 def aplicar_descuento(precio, descuento):
-    pass
+
+    if descuento < 0 or descuento > 40:
+        raise ValueError("Descuento inválido")
+
+    return precio - (precio * descuento / 100)
